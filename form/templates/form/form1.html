@@ -1,0 +1,275 @@
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'form/fef.css' %}" />
+<script rel="text/javascript" src="{% static 'form/fef.js' %}" ></script>
+<link rel="stylesheet" type="text/css" href="{% static 'form/bootstrap.min.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'form/jquery-ui.css' %}" />
+<script rel="text/javascript" src="{% static 'form/jquery.min.js' %}" ></script>
+<script rel="text/javascript" src="{% static 'form/jquery-ui.css' %}" ></script>
+<link rel="stylesheet" type="text/css" href="{% static 'form/jquery-ui_1.css' %}" />
+<script rel="text/javascript" src="{% static 'form/jquery-ui.min.js_1' %}" ></script>
+<link rel="stylesheet" type="text/css" href="{% static 'form/jquery-ui_2.css' %}" />
+<script rel="text/javascript" src="{% static 'form/jquery-ui.min_3.js' %}" ></script>
+
+<!--   <link rel="stylesheet" href="fef.css">
+  <script rel="text/javascript" src="fef.js"></script>
+
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="jquery-ui.css">
+  
+  <script src="jquery.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <link href="jquery-ui_1.css" rel="stylesheet" type="text/css"/>
+  <script src="jquery-ui.min.js_1"></script>
+  
+  <link href="jquery-ui_2.css" rel="stylesheet" type="text/css"/>
+  <script src="jquery-ui.min_3.js"></script>
+ -->  
+    <script>
+  $(document).ready(function() {
+    $("#datepicker").datepicker();
+  });
+  </script>
+
+</head>
+<body>
+	<header>
+	  <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IIT Roorkee Faculty-Forms</h1>
+	</header>
+	<br>
+
+	<div class="container">
+
+		<div class="tab">
+		  <button class="tablinks" onclick="openCity(event, 'General Information')" id="defaultOpen">General Information</button>
+		  <button class="tablinks" onclick="openCity(event, 'Generating New Employee Number')">Generating New Employee Number</button>
+		  <button class="tablinks" onclick="openCity(event, 'Information for issuance of Identity Card')">Information for issuance of Identity Card</button>
+		   <button class="tablinks" onclick="openCity(event, 'Knowledge of Official Language(Hindi)')">Knowledge of Official Language(Hindi)</button>
+		   <button class="tablinks" onclick="openCity(event, 'Medical Form')">Medical Form</button>
+		   <button class="tablinks" onclick="openCity(event, 'Medical Facilities to Family')">Medical Facilities to Family</button>
+		   <button class="tablinks" onclick="openCity(event, 'Information for issuance of Identity Card')">Information for issuance of Identity Card</button>
+		</div>
+
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+
+		<div id="General Information" class="tabcontent">
+			<div class="container col-sm-12">
+			  <div class="panel-group" id="accordion">
+
+			    <!-- *Taking General Information from user as input* -->
+			      <div class="panel panel-default">
+			        <!-- <div class="panel-heading">
+			          <h2 class="panel-title" align="middle">
+			            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">General Information</a>
+			          </h2>
+			        </div> -->
+			        <div id="collapse1" class="panel-collapse collapse in ">
+
+						<form action="{% url 'form:register' %}" class="form-horizontal" method="post">
+						{% csrf_token %}			           
+			           
+			              <!-- *Taking name as input from user* -->
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr">Name:</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" name="name" id="usr" placeholder="Enter Name(In Capital Letters)">
+			                    </div>
+			                  </div>
+
+			              <!-- *Taking DOB as input from user* -->
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr">DOB:</label>
+			                      <div class='col-sm-6'>
+			                          <div class='input-group date' >
+			                              <input name="dob"  class="form-control">
+			                              <span class="input-group-addon">
+			                                  <span class="glyphicon glyphicon-calendar"></span>
+			                              </span>
+			                          </div>
+			                      </div>
+			                  </div>
+			                  <script>
+			                    $(document).ready(function() {
+			                      $("#datepicker").datepicker();
+			                    });
+			                  </script>
+			                  <!-- <script type="text/javascript">
+			                      $(function () {
+			                          $('#datetimepicker5').datetimepicker({
+			                              defaultDate: "11/1/2013",
+			                              disabledDates: [
+			                                  moment("12/25/2013"),
+			                                  new Date(2013, 11 - 1, 21),
+			                                  "11/22/2013 00:53"
+			                              ]
+			                          });
+			                      });
+			                  </script> -->
+			            
+			              <!-- *Taking Email as input from user* -->
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="email">Email:</label>
+			                     <div class="col-sm-10">
+			                       <input type='text' class="form-control" id='usr' placeholder="someone@example.com">
+			                     </div>
+			                  </div>
+
+			              <!-- *Taking Conatct Number as input from user* -->
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="email">Contact:</label>
+			                     <div class="col-sm-10">
+			                       <input type='text' class="form-control" id='usr' placeholder="9999999999">
+			                     </div>
+			                  </div>   
+
+			              <!-- *Taking Department as input from user* -->
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr">Department:</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="usr" placeholder="Enter Department">
+			                    </div>
+			                  </div>
+
+			              <!-- *Taking Date of joining as input from user* -->
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr">Date of Joining:</label>
+			                      <div class='col-sm-6'>
+			                          <div class='input-group date' id='datetimepicker5'>
+			                              <input type='text' class="form-control" id='usr' placeholder="Select Date">
+			                              <span class="input-group-addon">
+			                                  <span class="glyphicon glyphicon-calendar"></span>
+			                              </span>
+			                          </div>
+			                      </div>
+			                  </div>
+			                  <script type="text/javascript">
+			                      $(function () {
+			                          $('#datetimepicker5').datetimepicker({
+			                              defaultDate: "11/1/2013",
+			                              disabledDates: [
+			                                  moment("12/25/2013"),
+			                                  new Date(2013, 11 - 1, 21),
+			                                  "11/22/2013 00:53"
+			                              ]
+			                          });
+			                      });
+			                  </script>
+
+			              <!-- *Taking Blood Group as input from user* -->
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr">Blood Group:</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="usr" placeholder="X(-ve) or X(+ve)">
+			                    </div>
+			                  </div>
+
+			              <!-- *Taking Residential Address as input from user* -->
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr">Residential Address:</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="usr" placeholder="Street">
+			                    </div>
+			                  </div>
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr"></label>
+			                    <div class="col-sm-5">
+			                      <input type="text" class="form-control" id="usr" placeholder="City">
+			                    </div>
+			                    <div class="col-sm-5">
+			                      <input type="text" class="form-control" id="usr" placeholder="Pincode">
+			                    </div>
+			                  </div>
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr"></label>
+			                    <div class="col-sm-5">
+			                      <input type="text" class="form-control" id="usr" placeholder="State">
+			                    </div>
+			                  </div>
+
+			              <!-- *Taking PAN Card Number as input from user* -->
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr">PAN No. :</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="usr" placeholder="PAN">
+			                    </div>
+			                  </div> 
+
+			              <!-- *Taking Account Number of User as input from user* -->
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr">Account No. :</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="usr" placeholder="Bank Account Number">
+			                    </div>
+			                  </div>
+
+			              <!-- *Taking Name of Bank as input from user* -->
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr">Name of Bank:</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="usr" placeholder="Name of Bank (SBI)">
+			                    </div>
+			                  </div>    
+
+			              <!-- *Taking Address of Bank as input from user* -->
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr">Address of Bank:</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="usr" placeholder="Branch and Address">
+			                    </div>
+			                  </div>
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr"></label>
+			                    <div class="col-sm-5">
+			                      <input type="text" class="form-control" id="usr" placeholder="City">
+			                    </div>
+			                    <div class="col-sm-5">
+			                      <input type="text" class="form-control" id="usr" placeholder="Pincode">
+			                    </div>
+			                  </div>
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr"></label>
+			                    <div class="col-sm-5">
+			                      <input type="text" class="form-control" id="usr" placeholder="State">
+			                    </div>
+			                  </div>
+			           
+			                <!-- *Taking Name of Father as input from user* -->
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr">Name of Father:</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="usr" placeholder="Father Name">
+			                    </div>
+			                  </div>
+
+			                 <div class="form-group">        
+			                   <div class="col-sm-offset-2 col-sm-10">
+			                     <!-- <button type="submit" class="btn btn-default">Submit</button> -->
+								<input type="submit" value="Submit" />
+			                   </div>
+			                 </div>
+
+			         </div>
+			      </div>
+			  </div> 
+			  
+			</div>
+		</div>
+
+	</form>
+
+    	 
+	 <script type="text/javascript">document.getElementById("defaultOpen").click();</script>
+
+	<footer>
+		punnu_swag.com
+	</footer>
+
+</body>
+</html> 

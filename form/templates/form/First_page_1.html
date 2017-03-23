@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="fef.css">
+  <script rel="text/javascript" src="fef.js"></script>
+
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="jquery-ui.css">
+  
+  <script src="jquery.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <link href="jquery-ui_1.css" rel="stylesheet" type="text/css"/>
+  <script src="jquery-ui.min.js_1"></script>
+  
+  <link href="jquery-ui_2.css" rel="stylesheet" type="text/css"/>
+  <script src="jquery-ui.min_3.js"></script>
+  
+    <script>
+  $(document).ready(function() {
+    $("#datepicker").datepicker();
+  });
+  </script>
+
+</head>
+<body>
+	<header>
+	  <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IIT Roorkee Faculty-Forms</h1>
+	</header>
+	<br>
+
+	<div class="container">
+
+		<div class="tab">
+		  <button class="tablinks" onclick="openCity(event, 'General Information')" id="defaultOpen">General Information</button>
+		  <button class="tablinks" onclick="openCity(event, 'Generating New Employee Number')">Generating New Employee Number</button>
+		  <button class="tablinks" onclick="openCity(event, 'Information for issuance of Identity Card')">Information for issuance of Identity Card</button>
+		   <button class="tablinks" onclick="openCity(event, 'Knowledge of Official Language(Hindi)')">Knowledge of Official Language(Hindi)</button>
+		   <button class="tablinks" onclick="openCity(event, 'Medical Form')">Medical Form</button>
+		   <button class="tablinks" onclick="openCity(event, 'Medical Facilities to Family')">Medical Facilities to Family</button>
+		   <button class="tablinks" onclick="openCity(event, 'Information for issuance of Identity Card')">Information for issuance of Identity Card</button>
+		</div>
+
+		<div id="General Information" class="tabcontent">
+			<div class="container col-sm-12">
+			  <div class="panel-group" id="accordion">
+
+			    <!-- *Taking General Information from user as input* -->
+			      <div class="panel panel-default">
+			        <!-- <div class="panel-heading">
+			          <h2 class="panel-title" align="middle">
+			            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">General Information</a>
+			          </h2>
+			        </div> -->
+			        <div id="collapse1" class="panel-collapse collapse in ">
+			           
+			            <form class="form-horizontal">
+			           
+			              <!-- *Taking name as input from user* -->
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr">Name:</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="usr" placeholder="Enter Name(In Capital Letters)">
+			                    </div>
+			                  </div>
+
+			              <!-- *Taking DOB as input from user* -->
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr">DOB:</label>
+			                      <div class='col-sm-6'>
+			                          <div class='input-group date' >
+			                              <input id='datepicker' class="form-control">
+			                              <span class="input-group-addon">
+			                                  <span class="glyphicon glyphicon-calendar"></span>
+			                              </span>
+			                          </div>
+			                      </div>
+			                  </div>
+			                  <script>
+			                    $(document).ready(function() {
+			                      $("#datepicker").datepicker();
+			                    });
+			                  </script>
+			                  <!-- <script type="text/javascript">
+			                      $(function () {
+			                          $('#datetimepicker5').datetimepicker({
+			                              defaultDate: "11/1/2013",
+			                              disabledDates: [
+			                                  moment("12/25/2013"),
+			                                  new Date(2013, 11 - 1, 21),
+			                                  "11/22/2013 00:53"
+			                              ]
+			                          });
+			                      });
+			                  </script> -->
+			            
+			              <!-- *Taking Email as input from user* -->
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="email">Email:</label>
+			                     <div class="col-sm-10">
+			                       <input type='text' class="form-control" id='usr' placeholder="someone@example.com">
+			                     </div>
+			                  </div>
+
+			              <!-- *Taking Conatct Number as input from user* -->
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="email">Contact:</label>
+			                     <div class="col-sm-10">
+			                       <input type='text' class="form-control" id='usr' placeholder="9999999999">
+			                     </div>
+			                  </div>   
+
+			              <!-- *Taking Department as input from user* -->
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr">Department:</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="usr" placeholder="Enter Department">
+			                    </div>
+			                  </div>
+
+			              <!-- *Taking Date of joining as input from user* -->
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr">Date of Joining:</label>
+			                      <div class='col-sm-6'>
+			                          <div class='input-group date' id='datetimepicker5'>
+			                              <input type='text' class="form-control" id='usr' placeholder="Select Date">
+			                              <span class="input-group-addon">
+			                                  <span class="glyphicon glyphicon-calendar"></span>
+			                              </span>
+			                          </div>
+			                      </div>
+			                  </div>
+			                  <script type="text/javascript">
+			                      $(function () {
+			                          $('#datetimepicker5').datetimepicker({
+			                              defaultDate: "11/1/2013",
+			                              disabledDates: [
+			                                  moment("12/25/2013"),
+			                                  new Date(2013, 11 - 1, 21),
+			                                  "11/22/2013 00:53"
+			                              ]
+			                          });
+			                      });
+			                  </script>
+
+			              <!-- *Taking Blood Group as input from user* -->
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr">Blood Group:</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="usr" placeholder="X(-ve) or X(+ve)">
+			                    </div>
+			                  </div>
+
+			              <!-- *Taking Residential Address as input from user* -->
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr">Residential Address:</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="usr" placeholder="Street">
+			                    </div>
+			                  </div>
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr"></label>
+			                    <div class="col-sm-5">
+			                      <input type="text" class="form-control" id="usr" placeholder="City">
+			                    </div>
+			                    <div class="col-sm-5">
+			                      <input type="text" class="form-control" id="usr" placeholder="Pincode">
+			                    </div>
+			                  </div>
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr"></label>
+			                    <div class="col-sm-5">
+			                      <input type="text" class="form-control" id="usr" placeholder="State">
+			                    </div>
+			                  </div>
+
+			              <!-- *Taking PAN Card Number as input from user* -->
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr">PAN No. :</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="usr" placeholder="PAN">
+			                    </div>
+			                  </div> 
+
+			              <!-- *Taking Account Number of User as input from user* -->
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr">Account No. :</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="usr" placeholder="Bank Account Number">
+			                    </div>
+			                  </div>
+
+			              <!-- *Taking Name of Bank as input from user* -->
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr">Name of Bank:</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="usr" placeholder="Name of Bank (SBI)">
+			                    </div>
+			                  </div>    
+
+			              <!-- *Taking Address of Bank as input from user* -->
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr">Address of Bank:</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="usr" placeholder="Branch and Address">
+			                    </div>
+			                  </div>
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr"></label>
+			                    <div class="col-sm-5">
+			                      <input type="text" class="form-control" id="usr" placeholder="City">
+			                    </div>
+			                    <div class="col-sm-5">
+			                      <input type="text" class="form-control" id="usr" placeholder="Pincode">
+			                    </div>
+			                  </div>
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr"></label>
+			                    <div class="col-sm-5">
+			                      <input type="text" class="form-control" id="usr" placeholder="State">
+			                    </div>
+			                  </div>
+			           
+			                <!-- *Taking Name of Father as input from user* -->
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr">Name of Father:</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="usr" placeholder="Father Name">
+			                    </div>
+			                  </div>
+
+			                 <div class="form-group">        
+			                   <div class="col-sm-offset-2 col-sm-10">
+			                     <button type="submit" class="btn btn-default">Submit</button>
+			                   </div>
+			                 </div>
+
+			         </div>
+			      </div>
+			  </div> 
+			  
+			</div>
+		</div>
+
+		<div id="Generating New Employee Number" class="tabcontent">
+		 	<div class="container col-sm-12">
+         	 	<div class="panel-group" id="accordion">
+   			  <!-- *Taking Information from user as input for Generating New Employee Number* -->
+			    <div class="panel panel-default">
+			    <!--   <div class="panel-heading">
+			        <h4 class="panel-title" align="middle">
+			          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Form for Generating New Employee Number</a>
+			        </h4>
+			      </div> -->
+			      <div id="collapse2" class="panel-collapse collapse in">
+			        <div class="panel-body">
+			          
+			            <form class="form-horizontal">
+			           
+			              <!-- Name of Employee -->
+			                  <div class="form-group row">
+			                    <label class="control-label col-sm-2 hidden-sm" align="right"> Name of Employee:</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="rupees" placeholder="Name" disabled>
+			                    </div>
+			                  </div>
+
+			               <!-- *DOB of user* -->
+			                  <div class="form-group row">
+			                    <label class="control-label col-sm-2" align="right">DOB:</label>
+			                      <div class='col-sm-6'>
+			                          <div class='input-group date' id='datetimepicker5'>
+			                              <input type='text' class="form-control" id='usr' placeholder="Date of Birth" disabled>
+			                              <span class="input-group-addon">
+			                                  <span class="glyphicon glyphicon-calendar"></span>
+			                              </span>
+			                          </div>
+			                      </div>
+			                  </div>
+			                  <script type="text/javascript">
+			                      $(function () {
+			                          $('#datetimepicker5').datetimepicker({
+			                              defaultDate: "11/1/2013",
+			                              disabledDates: [
+			                                  moment("12/25/2013"),
+			                                  new Date(2013, 11 - 1, 21),
+			                                  "11/22/2013 00:53"
+			                              ]
+			                          });
+			                      });
+			                  </script>
+
+			               <!-- *Date of joining of user* -->
+			                  <div class="form-group row">
+			                    <label class="control-label col-sm-2" align="right">Date of Joining:</label>
+			                      <div class='col-sm-6'>
+			                          <div class='input-group date' id='datetimepicker5'>
+			                              <input type='text' class="form-control" id='usr' placeholder="Select Date" disabled="">
+			                              <span class="input-group-addon">
+			                                  <span class="glyphicon glyphicon-calendar"></span>
+			                              </span>
+			                          </div>
+			                      </div>
+			                  </div>
+			                  <script type="text/javascript">
+			                      $(function () {
+			                          $('#datetimepicker5').datetimepicker({
+			                              defaultDate: "11/1/2013",
+			                              disabledDates: [
+			                                  moment("12/25/2013"),
+			                                  new Date(2013, 11 - 1, 21),
+			                                  "11/22/2013 00:53"
+			                              ]
+			                          });
+			                      });
+			                  </script>
+
+
+			              <!-- *Contact number of user* -->
+			                  <div class="form-group row">
+			                    <label class="control-label col-sm-2" align="right"> Mobile No. :</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="rupees" placeholder="9999999999" disabled="">
+			                    </div>
+			                  </div>
+
+			              <!-- *Email id of user* -->
+			                  <div class="form-group row">
+			                    <label class="control-label col-sm-2" align="right"> Email Id :</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="rupees" placeholder="someone@example.com" disabled="">
+			                    </div>
+			                  </div>
+
+			              <!-- *PAN Number of user* -->
+			                  <div class="form-group row">
+			                    <label class="control-label col-sm-2" align="right"> PAN :</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="rupees" placeholder="PAN Number" disabled="" >
+			                    </div>
+			                  </div>
+
+			              <!-- *TDS information as input from user* -->
+			                  <div class="form-group row">
+			                    <label class="control-label col-sm-2" align="right"> TDS (per month) :</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="rupees" placeholder="Income tax amount to be deducted per month from your salary">
+			                    </div>
+			                  </div>   
+
+			               <!-- *Account Number of User* -->
+			                  <div class="form-group row">
+			                    <label class="control-label col-sm-2" for="usr" align="right">Account No. :</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="usr" placeholder="Bank Account Number" disabled="">
+			                    </div>
+			                  </div>
+
+			              <!-- *Name of Bank of user* -->
+			                  <div class="form-group row">
+			                    <label class="control-label col-sm-2" for="usr" align="right">Name of Bank:</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="usr" placeholder="Name of Bank (SBI)" disabled="">
+			                    </div>
+			                  </div>    
+
+			              <!-- *Address of Bank of user* -->
+			                  <div class="form-group row">
+			                    <label class="control-label col-sm-2" for="usr" align="right">Address of Bank:</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="usr" placeholder="Branch and Address" disabled="">
+			                    </div>
+			                  </div>
+			                  <div class="form-group row">
+			                    <label class="control-label col-sm-2" for="usr"></label>
+			                    <div class="col-sm-5">
+			                      <input type="text" class="form-control" id="usr" placeholder="City" disabled="">
+			                    </div>
+			                    <div class="col-sm-5">
+			                      <input type="text" class="form-control" id="usr" placeholder="Pincode" disabled="">
+			                    </div>
+			                  </div>
+			                  <div class="form-group row">
+			                    <label class="control-label col-sm-2" for="usr" align="right"></label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="usr" placeholder="State" disabled="">
+			                    </div>
+			                  </div>  
+			 
+			               <!-- *Any Other Information of User* -->
+			                  <div class="form-group row">
+			                    <label class="control-label col-sm-2" align="right">Any other Information:</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="usr" placeholder="" >
+			                    </div>
+			                  </div>    
+			                        
+			                  <div class="form-group">        
+			                   <div class="col-sm-offset-2 col-sm-10">
+			                     <button type="submit" class="btn btn-default">Submit</button>
+			                   </div>
+			                 </div>      
+
+			        </div>
+			      </div>
+			    </div>
+		 	 </div> 
+
+    		</div>
+		</div>
+
+		<div id="Information for issuance of Identity Card" class="tabcontent">
+		     <div class="container col-sm-12" >
+			  <div class="panel-group" id="accordion">
+
+			  <!-- *Taking Information from user as input for issuance of Identity Card* -->
+			    <div class="panel panel-default">
+			      <!-- <div class="panel-heading">
+			        <h4 class="panel-title" align="middle">
+			          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Information for issuance of Identity Card</a>
+			        </h4>
+			      </div> -->
+			      <div id="collapse3" class="panel-collapse collapse in">
+			        <div class="panel-body">
+			          
+			            <form class="form-horizontal">
+			           
+			              <!-- *Taking Card Number as input from user* -->
+			                  <div class="form-group row">
+			                    <label class="control-label col-sm-2 " align="right"> Card No. :</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="rupees" placeholder="Card Number" >
+			                    </div>
+			                  </div>
+
+
+			                  <div class="form-group row">
+			                    <label class="control-label col-sm-2 " align="right"> Son of/ Wife of/ Daughter of :</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="rupees" placeholder="SO/WO/DO" >
+			                    </div>
+			                  </div>
+
+			                  <div class="form-group row">
+			                    <label class="control-label col-sm-2 " align="right"> Designation :</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="rupees" placeholder="Designation" >
+			                    </div>
+			                  </div>
+
+			                   <div class="form-group row">
+			                    <label class="control-label " align="Middle"> &nbsp; &nbsp; Date of Retirement/Date of termination of the contract :</label>
+			                    <br>
+			                    <label class="control-label col-sm-2"></label>
+			                    <div class="col-sm-8">
+			                          <div class='input-group date' id='datetimepicker5'>
+			                              <input type='text' class="form-control" id='usr' placeholder="Date of Retirement">
+			                              <span class="input-group-addon">
+			                                  <span class="glyphicon glyphicon-calendar"></span>
+			                              </span>
+			                          </div>
+			                      </div>
+			                  </div>
+			                  <script type="text/javascript">
+			                      $(function () {
+			                          $('#datetimepicker5').datetimepicker({
+			                              defaultDate: "11/1/2013",
+			                              disabledDates: [
+			                                  moment("12/25/2013"),
+			                                  new Date(2013, 11 - 1, 21),
+			                                  "11/22/2013 00:53"
+			                              ]
+			                          });
+			                      });
+			                  </script>
+
+			                  <div class="form-group row">
+			                    <label class="control-label" align="middle"> &nbsp; &nbsp; Regular/ Contract/ 'Y' Pool/ New Appointment (If no contract, attach a copy of the letter of appointment) :</label>
+			                    <br>
+			                    <!-- <label class="control-label col-sm-2"></label> -->
+			                    <div class="col-sm-12">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                  </div>
+
+			                  <div class="form-group row" align="left">
+			                    <label class="control-label" align="middle"> &nbsp; &nbsp; Reason for issuance of a duplicate I-Card of (Loss/Change in designation/ Change in address) :</label>
+			                    <br>
+			                    <!-- <label class="control-label col-sm-2"></label> -->
+			                    <div class="col-sm-12">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                  </div>	
+			        </div>
+			      </div>
+			    </div>
+
+
+			  </div> 
+			</div>
+		</div>
+
+		
+
+		<div id="Knowledge of Official Language(Hindi)" class="tabcontent">
+		     <div class="container col-sm-12" >
+			  <div class="panel-group" id="accordion">
+
+			    <div class="panel panel-default">
+			      <!-- <div class="panel-heading">
+			        <h4 class="panel-title" align="middle">
+			          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Information for issuance of Identity Card</a>
+			        </h4>
+			      </div> -->
+			      <div id="collapse1" class="panel-collapse collapse in">
+			        <div class="panel-body">
+			          
+			            <form class="form-horizontal">
+			        
+			                  <div class="form-group row">
+			                    <label class="control-label" > &nbsp; &nbsp; What is your Mother Tongue? :</label>
+			                    <br>
+			                    <!-- <label class="control-label col-sm-2"></label> -->
+			                    <div class="col-sm-12">
+			                      <input type="text" class="form-control" id="rupees" placeholder=" Yes or No " >
+			                    </div>
+			                  </div>
+
+			                  <div class="form-group row">
+			                    <label class="control-label" > &nbsp; &nbsp; Have you read Hindi as a subject in 10th Standard or in any other higher examination? :</label>
+			                    <br>
+			                    <!-- <label class="control-label col-sm-2"></label> -->
+			                    <div class="col-sm-12">
+			                      <input type="text" class="form-control" id="rupees" placeholder="Yes or No " >
+			                    </div>
+			                  </div>
+
+			                  <div class="form-group row">
+			                    <label class="control-label" > &nbsp; &nbsp; Have you passed Hindi Pragya Examination under the Hindi Teaching Scheme? :</label>
+			                    <br>
+			                    <!-- <label class="control-label col-sm-2"></label> -->
+			                    <div class="col-sm-12">
+			                      <input type="text" class="form-control" id="rupees" placeholder="Yes or No " >
+			                    </div>
+			                  </div>
+
+			                  <div class="form-group row">
+			                    <label class="control-label" > &nbsp; &nbsp; Have you passed your 10th Standard or any other higher examination with Hindi Medium? :</label>
+			                    <br>
+			                    <!-- <label class="control-label col-sm-2"></label> -->
+			                    <div class="col-sm-12">
+			                      <input type="text" class="form-control" id="rupees" placeholder="Yes or No " >
+			                    </div>
+			                  </div>
+
+			                  <div class="form-group row">
+			                    <label class="control-label" > &nbsp; &nbsp; Have you taken Hindi as an elective subject in degree examination or any other higher examination? :</label>
+			                    <br>
+			                    <!-- <label class="control-label col-sm-2"></label> -->
+			                    <div class="col-sm-12">
+			                      <input type="text" class="form-control" id="rupees" placeholder="Yes or No " >
+			                    </div>
+			                  </div>
+
+			                  <div class="form-group row">
+			                    <label class="control-label" > &nbsp; &nbsp; Do you declare that you possess working knowledge of Hindi? :</label>
+			                    <br>
+			                    <!-- <label class="control-label col-sm-2"></label> -->
+			                    <div class="col-sm-12">
+			                      <input type="text" class="form-control" id="rupees" placeholder="Yes or No " >
+			                    </div>
+			                  </div>
+
+			                  <div class="form-group row">
+			                    <label class="control-label" > &nbsp; &nbsp; Do you agree yourself to possess proficiency in Hindi? :</label>
+			                    <br>
+			                    <!-- <label class="control-label col-sm-2"></label> -->
+			                    <div class="col-sm-12">
+			                      <input type="text" class="form-control" id="rupees" placeholder="Yes or No " >
+			                    </div>
+			                  </div>
+			        </div>
+			      </div>
+			    </div>
+
+
+			  </div> 
+			</div>
+		</div>
+    	
+    	<div id="Medical Form" class="tabcontent">
+		     <div class="container col-sm-12" >
+			  <div class="panel-group" id="accordion">
+
+			  <!-- *Taking Information from user as input for issuance of Identity Card* -->
+			    <div class="panel panel-default">
+			      <!-- <div class="panel-heading">
+			        <h4 class="panel-title" align="middle">
+			          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Information for issuance of Identity Card</a>
+			        </h4>
+			      </div> -->
+			      <div id="collapse1" class="panel-collapse collapse in">
+			        <div class="panel-body">
+			          
+			            <form class="form-horizontal">
+			           
+			                  <div class="form-group row">
+			                    <label class="control-label" > &nbsp; &nbsp; Have you ever had small-pox? Intermittent or any other fever enlargement of or suppuration of glands,</label>
+			                    <br>
+			                    <label class="control-label" > &nbsp; &nbsp; spitting of blood,asthma,heart disease, lung diseases, fainting attacks, theumatism, appendicitis? :</label>
+			                    <br>
+			                    <!-- <label class="control-label col-sm-2"></label> -->
+			                    <div class="col-sm-12">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                  </div>
+
+			                  <div class="form-group row">
+			                    <label class="control-label" > &nbsp; &nbsp; Any other disease or accident Requiring confinement to bed & medical or surgical treatment? :</label>
+			                    <br>
+			                    
+			                    <!-- <label class="control-label col-sm-2"></label> -->
+			                    <div class="col-sm-12">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                  </div>
+
+			                  <div class="form-group row">
+			                    <label class="control-label" > &nbsp; &nbsp; When were you last vaccinated? :</label>
+			                    <br>
+			                    
+			                    <!-- <label class="control-label col-sm-2"></label> -->
+			                    <div class="col-sm-12">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                  </div>
+
+			                  <div class="form-group row">
+			                    <label class="control-label" > &nbsp; &nbsp; Have you or any of your near relations been affected with consumption, scrofula, gout, asthma, fits, epilepsy</label>
+			                    <br>
+			                    <label class="control-label" > &nbsp; &nbsp; or insanity? :</label>
+			                    <br>
+			                    
+			                    <!-- <label class="control-label col-sm-2"></label> -->
+			                    <div class="col-sm-12">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                  </div>
+			                  
+			                  <div class="form-group row">
+			                    <label class="control-label" > &nbsp; &nbsp; Have you suffered from of nervousness due to over-work or any other cause? :</label>
+			                    <br>
+			                    
+			                    <!-- <label class="control-label col-sm-2"></label> -->
+			                    <div class="col-sm-12">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                  </div>
+			                  
+			                  <div class="form-group row">
+			                    <label class="control-label" > &nbsp; &nbsp; Father's age if living and state of health :</label>
+			                    <br>
+			                    
+			                    <!-- <label class="control-label col-sm-2"></label> -->
+			                    <div class="col-sm-12">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                  </div>
+			                  
+			                  <div class="form-group row">
+			                    <label class="control-label" > &nbsp; &nbsp; Father's age at death and cause of death :</label>
+			                    <br>
+			                    
+			                    <!-- <label class="control-label col-sm-2"></label> -->
+			                    <div class="col-sm-12">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                  </div>
+
+			                  <div class="form-group row">
+			                    <label class="control-label" > &nbsp; &nbsp; No. Of brothers living, their ages and state of health :</label>
+			                    <br>
+			                    
+			                    <!-- <label class="control-label col-sm-2"></label> -->
+			                    <div class="col-sm-12">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                  </div>
+
+			                  <div class="form-group row">
+			                    <label class="control-label" > &nbsp; &nbsp; No. Of brothers dead, their ages at and cause of death :</label>
+			                    <br>
+			                    
+			                    <!-- <label class="control-label col-sm-2"></label> -->
+			                    <div class="col-sm-12">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                  </div>
+
+			                  <div class="form-group row">
+			                    <label class="control-label" > &nbsp; &nbsp; Mother's age if living and state of health :</label>
+			                    <br>
+			                    
+			                    <!-- <label class="control-label col-sm-2"></label> -->
+			                    <div class="col-sm-12">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                  </div>
+
+			                  <div class="form-group row">
+			                    <label class="control-label" > &nbsp; &nbsp; Mother's age at death and cause of death :</label>
+			                    <br>
+			                    
+			                    <!-- <label class="control-label col-sm-2"></label> -->
+			                    <div class="col-sm-12">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                  </div>
+
+			                  <div class="form-group row">
+			                    <label class="control-label" > &nbsp; &nbsp;  No. Of sisters living, their ages and state of health :</label>
+			                    <br>
+			                    
+			                    <!-- <label class="control-label col-sm-2"></label> -->
+			                    <div class="col-sm-12">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                  </div>
+
+			                  <div class="form-group row">
+			                    <label class="control-label" > &nbsp; &nbsp; No. Of sisters dead, their ages at and cause of death :</label>
+			                    <br>
+			                    
+			                    <!-- <label class="control-label col-sm-2"></label> -->
+			                    <div class="col-sm-12">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                  </div>
+
+			                  <div class="form-group row">
+			                    <label class="control-label" > &nbsp; &nbsp; Whether the person with any disabilities? “Yes or No”</label>
+			                    <br>
+			                    <label class="control-label" > &nbsp; &nbsp;  If yes, then which type of disability</label>
+			                    <br>
+			                    <label class="control-label" > &nbsp; &nbsp; (i) VH (Visual handicapped)  (ii) HH (Hearing Handicapped)  (iii) OH (Orthopadically Handicapped) </label>
+			                    <br>
+			                    <!-- <label class="control-label col-sm-2"></label> -->
+			                    <div class="col-sm-12">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                  </div>
+
+			                      
+			        </div>
+			      </div>
+			    </div>
+
+
+			  </div> 
+			</div>
+		</div>
+    	
+    	<div id="Medical Facilities to Family" class="tabcontent">
+		     <div class="container col-sm-12" >
+			  <div class="panel-group" id="accordion">
+
+			  <!-- *Taking Information from user as input for issuance of Identity Card* -->
+			    <div class="panel panel-default">
+			      <!-- <div class="panel-heading">
+			        <h4 class="panel-title" align="middle">
+			          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Information for issuance of Identity Card</a>
+			        </h4>
+			      </div> -->
+			      <div id="collapse3" class="panel-collapse collapse in">
+			        <div class="panel-body">
+			          
+			            <form class="form-horizontal">
+			           
+			              <!-- *Taking Card Number as input from user* -->
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr">Name </label>
+								<label class="control-label col-sm-2" for="usr">DOB </label>
+							   <label class="control-label col-sm-2" for="usr">Relationship </label>
+							   <label class="control-label col-sm-2" for="usr">Monthly Income </label>
+							   <label class="control-label col-sm-2" for="usr">Medical Booklet No. </label>
+							   <label class="control-label col-sm-2" for="usr">Validity Date </label>
+							   <br>
+							   <br>
+							   
+			                  </div>
+                              
+			                  <div class="form-group row">
+			                    <div class="col-sm-2">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                    <div class="col-sm-2">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                    <div class="col-sm-2">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                    <div class="col-sm-2">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                    <div class="col-sm-2">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                    <div class="col-sm-2">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                  </div>
+
+			                  <div class="form-group row">
+			                    <div class="col-sm-2">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                    <div class="col-sm-2">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                    <div class="col-sm-2">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                    <div class="col-sm-2">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                    <div class="col-sm-2">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                    <div class="col-sm-2">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                  </div>
+
+			                  <div class="form-group row">
+			                    <div class="col-sm-2">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                    <div class="col-sm-2">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                    <div class="col-sm-2">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                    <div class="col-sm-2">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                    <div class="col-sm-2">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                    <div class="col-sm-2">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                  </div>
+
+			                  <div class="form-group row">
+			                    <div class="col-sm-2">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                    <div class="col-sm-2">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                    <div class="col-sm-2">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                    <div class="col-sm-2">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                    <div class="col-sm-2">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                    <div class="col-sm-2">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                  </div>
+
+			                  <div class="form-group row">
+			                    <div class="col-sm-2">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                    <div class="col-sm-2">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                    <div class="col-sm-2">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                    <div class="col-sm-2">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                    <div class="col-sm-2">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                    <div class="col-sm-2">
+			                      <input type="text" class="form-control" id="rupees" placeholder="" >
+			                    </div>
+			                  </div>
+			        </div>
+			      </div>
+			    </div>
+
+
+			  </div> 
+			</div>
+		</div>
+    	
+    	<div id="Information for issuance of Identity Card" class="tabcontent">
+		     <div class="container col-sm-12" >
+			  <div class="panel-group" id="accordion">
+
+			  <!-- *Taking Information from user as input for issuance of Identity Card* -->
+			    <div class="panel panel-default">
+			      <!-- <div class="panel-heading">
+			        <h4 class="panel-title" align="middle">
+			          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Information for issuance of Identity Card</a>
+			        </h4>
+			      </div> -->
+			      <div id="collapse3" class="panel-collapse collapse in">
+			        <div class="panel-body">
+			          
+			            <form class="form-horizontal">
+			           
+			              <!-- *Taking Card Number as input from user* -->
+			                  <div class="form-group">
+			                    <label class="control-label col-sm-2" for="usr">Card No. :</label>
+			                    <div class="col-sm-10">
+			                      <input type="text" class="form-control" id="usr" placeholder="Card Number">
+			                    </div>
+			                  </div>
+			        </div>
+			      </div>
+			    </div>
+
+
+			  </div> 
+			</div>
+		</div>
+    
+    </div> 
+	 <script type="text/javascript">document.getElementById("defaultOpen").click();</script>
+
+	<footer>
+		punnu_swag.com
+	</footer>
+
+</body>
+</html> 

@@ -1,0 +1,9 @@
+{% if person_list %}
+    <ul>
+    {% for person in person_list %}
+        <li><a href="{% url 'form:person_detail' person.id %}"> {{ person.name }} </a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Person Detail available.</p>
+{% endif %}
