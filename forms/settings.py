@@ -22,6 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'ub3k=i4$9pf%p+c8@^v2hfj7!2mk1=xvqb&70a^6l42+gj+8rc'
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -46,9 +49,12 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+LOGIN_REDIRECT_URL = '/forms/new/'
 
 ROOT_URLCONF = 'forms.urls'
 
